@@ -1,0 +1,161 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title> Registration Form</title>
+    	<link rel ="stylesheet" href="/css/Reg.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>  
+	</head>
+	<body bgcolor="#88c7ec">
+		<div class="login-banner-div">
+			<img src="http://www.chandusoft.com/images/logo/chandusoft_logo.png" alt="chandusoft logo">
+		</div>
+	<form ng-app="myApp" ng-controller='validateCtrl' name='myForm' class="login-form" action="http://192.168.1.26:8123/adminURL1" method="POST" >
+			<table class="chat-login-table">
+				<tr class="chat-login-table-tr">
+					<th colspan="2" class="chat-login-table-tr-th">
+						<h2>Agent Registration</h2>
+					</th>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">FirstName:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="firstname" autocomplete="off" pattern="^[a-zA-Z ]{4,}"type="text" placeholder= "* First Name" required class="chat-login-table-tr-th-input" ng-model="user" required>
+						<span style="color:red" ng-show="myForm.firstname.$dirty && myForm.firstname.$invalid">
+<span ng-show="myForm.user.$error.required">Firstname is required.</span>
+</span>
+					</td>
+
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">LastName:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="lastname" autocomplete="off"  pattern="^[a-zA-Z ]{4,}"type="text" placeholder= "* Last Name" required class="chat-login-table-tr-th-input">
+					</td>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">UserName:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="username" autocomplete="off" pattern="^[a-zA-Z ]{4,}"type="text" placeholder= "* UserName"required class="chat-login-table-tr-th-input">
+					</td>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">Password:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="password" autocomplete="off" ID="tbPassword"  type="password" placeholder= "* Password" onkeyup="CheckPasswordStrength(this.value)" required class="chat-login-table-tr-th-input">
+						<span id="password_strength"></span>
+					</td>
+
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">Gender:</th>
+					<td class="chat-login-table-tr-td">
+						<input type="radio" name="gender" value="male" checked> Male
+						<input type="radio" name="gender" value="female"> Female
+
+					</td>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">Email:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="email" autocomplete="off" type="email" placeholder= "* Email" required class="chat-login-table-tr-th-input">
+					</td>
+				</tr>
+
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">Address:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="address" autocomplete="off"  type="text" placeholder= "* Address" required class="chat-login-table-tr-th-input">
+					</td>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">PhoneNumber:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="phonenumber" autocomplete="off" pattern="[0-9\(\)\-\+ ]{8,15}" type="text" placeholder= "* Phone Number" required class="chat-login-table-tr-th-input">
+					</td>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th colspan="2" class="chat-login-table-tr-th">
+						<input type="submit" value="Register" name="log in" class="chat-login-table-tr-th-input" />
+
+					</th>
+				</tr>
+
+				<tr class="chat-login-table-tr">
+					<th colspan="2" class="chat-login-table-tr-th">
+						<a href="http://192.168.1.26:8123/adminURL">Already Registered? Login</a>
+					</th>
+				</tr>
+			</table>
+		</form>
+
+
+	</body>
+</html>
+<script>
+
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+    $scope.user = '';
+    $scope.email = '';
+});
+   function CheckPasswordStrength(password) {
+      var password_strength = document.getElementById("password_strength");
+
+
+        //if textBox is empty
+        if(password.length==0){
+            password_strength.innerHTML = "";
+            return;
+        }
+
+        //Regular Expressions
+        var regex = new Array();
+        regex.push("[A-Z]"); //For Uppercase Alphabet
+        regex.push("[a-z]"); //For Lowercase Alphabet
+        regex.push("[0-9]"); //For Numeric Digits
+        regex.push("[$@$!%*#?&]"); //For Special Characters
+
+        var passed = 0;
+
+        //Validation for each Regular Expression
+        for (var i = 0; i < regex.length; i++) {
+            if((new RegExp (regex[i])).test(password)){
+                passed++;
+            }
+        }
+
+        //Validation for Length of Password
+        if(passed > 2 && password.length > 8){
+            passed++;
+        }
+
+        //Display of Status
+        var color = "";
+        var passwordStrength = "";
+        switch(passed){
+            case 0:
+              	break;
+            case 1:
+                passwordStrength = "Password is Weak.";
+                color = "Red";
+                break;
+            case 2:
+                passwordStrength = "Password is Good.";
+                color = "Blue";
+                break;
+            case 3:
+            		break;
+            case 4:
+                passwordStrength = "Password is Strong.";
+                color = "Green";
+                break;
+            case 5:
+                passwordStrength = "Password is Very Strong.";
+                color = "darkgreen";
+                break;
+        }
+        password_strength.innerHTML = passwordStrength;
+        password_strength.style.color = color;
+    }
+</script>

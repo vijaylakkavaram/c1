@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+<head>
+
+    <title>Chat App</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<!--     <script src ='/public/js/jquery.js'>
+        </script> -->
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+.login-banner-div {
+	background-color: white;
+}
+.login-banner-div img {
+	display: block;
+    margin: 0 auto;
+
+}
+.message{
+
+    padding: 10px;
+}
+.chat.box{
+
+
+
+}
+p.ridge {
+    border-style: ridge;
+    height: 400px;
+    width: 850px;
+    overflow-y: scroll;
+    position:absolute;
+    left: 160px;
+    top: 160px;
+    border:2px solid black;
+    border-radius:5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: right;
+
+       line-height: 1;
+          padding: 0;
+          vertical-align: top;
+          margin-bottom: -2px;
+;
+    }
+    .msg{
+        position:absolute;
+    left: 160px;
+    bottom: 30px;
+    width: 850px;
+    height: 40px;
+    border:2px solid black;
+    border-radius:5px;
+
+
+
+    }
+    .h2{
+        position:absolute;
+        left: 500px;
+        top: 110px;
+        color: brown;
+    }
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    position: relative;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.tablinks{
+
+
+    left: 450px;
+}
+.fa.fa-close{
+    position: absolute;
+
+font-size: 25px;
+top: 175px;
+right: 100px;
+
+}
+.tabs { list-style: none; }
+.tabs li { display: inline; }
+.tabs li a { color: black; float: left; display: block; padding: 4px 10px; margin-left: -1px; position: relative; left: 1px; background: white; text-decoration: none; }
+.tabs li a:hover { background: #ccc; }
+.group:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+.box-wrap { position: relative; min-height: 250px; }
+.tabbed-area div div { background: white; padding: 20px; min-height: 250px; position: absolute; top: -1px; left: 0; width: 100%; }
+.tabbed-area div div, .tabs li a { border: 1px solid #ccc; }
+
+#box-one:target, #box-two:target, #box-three:target {
+  z-index: 1;
+}
+            </style>
+</head>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body bgcolor="#88c7ec">
+		<div class="login-banner-div"  >
+			<img src="http://www.chandusoft.com/images/logo/chandusoft_logo.png" alt="chandusoft logo">
+        </div>
+        <div class="tabbed-area">
+
+                <ul class="tabs group">
+                    <li><a href="#box-one">Tab 1</a></li>
+                    <li><a href="#box-two">Tab 2</a></li>
+                    <li><a href="#box-three">Tab 3</a></li>
+                </ul>
+
+                <div class="box-wrap">
+
+                    <div id="box-one">
+                      <!-- box two content -->
+                    </div>
+
+                    <div id="box-two">
+                      <!-- box two content -->
+                    </div>
+
+                    <div id="box-three">
+                      <!-- box two content -->
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="box-wrap">
+
+                    <div id="box-four">
+                        <!-- content for panel -->
+
+                        <ul class="tabs group">
+                            <li class="cur"><a href="#box-four">Tab 4</a></li>
+                            <li><a href="#box-five">Tab 5</a></li>
+                            <li><a href="#box-six">Tab 6</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="box-five">
+                        <!-- content for panel -->
+
+                        <ul class="tabs group">
+                            <li><a href="#box-four">Tab 4</a></li>
+                            <li class="cur"><a href="#box-five">Tab 5</a></li>
+                            <li><a href="#box-six">Tab 6</a></li>
+                        </ul>
+                    </div>
+
+                    <div id="box-six">
+                        <!-- content for panel -->
+
+                        <ul class="tabs group">
+                            <li><a href="#box-four">Tab 4</a></li>
+                            <li><a href="#box-five">Tab 5</a></li>
+                            <li class="cur"><a href="#box-six">Tab 6</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+<!--   <i class="fa fa-close" style="font-size:24px"></i>
+ -->
+
+
+</body>
+<script >
+
+
+</script>
+
+</html>

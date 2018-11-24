@@ -1,0 +1,112 @@
+
+ <!doctype html>
+ <html>
+     <head>
+
+             <title>Chat App</title>
+
+             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          </head>
+ <body bgcolor="#88c7ec">
+         <div class="login-banner-div"  >
+             <img src="http://www.chandusoft.com/images/logo/chandusoft_logo.png" alt="chandusoft logo">
+         </div>
+         <ul class="pages">
+                 <li class="chat page">
+                         <div class="container"></div>
+                         <div class="tabs">
+                             <div class="t1">
+                               <div class="tab" id='tb1'>
+                         <input type="radio" class="tab-1" name="tab-group-1" checked>
+                           <label for="tab1" class="c1" id='l1'>Tab One<span id ="cl1" onclick="close()"><button class="fa fa-close" id ="fa"></button></span>
+                          </label>
+                                 <div class="content1">
+                                     stuff one
+                                 </div>
+                             </div>
+                         </div>
+                         <div class="t2">
+                               <div class="tab" id='tb2'>
+                                 <input type="radio" id="tab-2" name="tab-group-1">
+                                 <label for="tab-2">Tab Two <span id="cl2"><button class="fa fa-close" id ="fa"></button> </span></label>
+                                 <div class="content2">
+                                     stuff two
+                                 </div>
+                             </div>
+                         </div>
+                           <div class="t3">
+                              <div class="tab" id='tb3'>
+                                 <input type="radio" id="tab-3" name="tab-group-1">
+                                 <label for="tab-3">Tab Three  <span id='cl3'><button class="fa fa-close" id ="fa"></button></label>
+                                 <div class="content3">
+                                     stuff third
+                                 </div>
+                             </div>
+                         </div>
+
+                             <div class="t4">
+                             <div class="tab" id="tb4">
+                                     <input type="radio" id="tab-4" name="tab-group-1">
+                                     <label for="tab-4">Tab four <span id='cl4'><button class="fa fa-close" id ="fa"></button></label>
+                                     <div class="content4">
+                                         stuff fourth
+                                     </div>
+                                 </div>
+                             </div>
+ </div>
+
+                               <p class='keystroke'> stuff one</p>
+ <input type="text" class="inputMessage" placeholder="Type Message here"  >
+ <div  class="btn btn-info btn-lg"  onclick="getmessage1()" >
+         <span class="glyphicon glyphicon-send"></span> Send
+
+     </div>
+     <script>
+/*  $(".inputMessage").on('keyup', function   (e) {
+if (e.keyCode == 	13) {
+
+var id = document.getElementsByClassName("inputMessage");
+if (id.length > 0) {
+var iio=(id[0].value);
+console.log(iio)
+}
+$('.inputMessage').val('');
+
+   // Do something
+}})
+ */
+
+
+         </script>
+
+                       <ul class ="adminList" id="admins">
+                     </ul>
+                       </li>
+
+
+
+
+
+                 <li class="error page" style="display: none">
+                     <div class="form">
+                         <h3 class="title">Reconnecting...</h3>
+                     </div>
+                 </li>
+             </ul>
+             <audio id="windowSound">
+                <source src="/sounds/new_chat_window.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="chatSound">
+                <source src="/sounds/new_message.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="pokeSound">
+                <source src="/sounds/poke.mp3" type="audio/mpeg">
+            </audio>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/js/adminworking.js"></script>
+
+       </body>
+           </html>

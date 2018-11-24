@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>jQuery Traversing Parent</title>
+
+<script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+<script>
+$(document).ready(function(){
+
+//  $("h4").parent().append("background-color","yellow");//below the span eleemnt
+  $("h4").children().append("background-color","yellow");//below the span eleemnt
+
+});
+</script>
+</head>
+<body>
+
+<span>Span Element - Parent of h4 element
+
+<h3 style="color:aqua">This is an h3 element - child of Span.</h3>
+<h4></h4>
+<h1></h1>
+
+</span>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Kendo UI Snippet</title>
+
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.911/styles/kendo.common.min.css"/>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.911/styles/kendo.rtl.min.css"/>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.911/styles/kendo.silver.min.css"/>
+    <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.911/styles/kendo.mobile.all.min.css"/>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2018.3.911/js/kendo.all.min.js"></script>
+</head>
+<body>
+
+<div id="chat"></div>
+
+
+
+<script>
+  var CalendarComponent = kendo.chat.Component.extend({
+    init: function (options, view) {
+      kendo.chat.Component.fn.init.call(this, options, view);
+
+      // Create a <div> from which the Calendar will be initialized
+      var calendarElement = $('<div>');
+
+      // Initialize the Calendar widget passing the provided value
+      calendarElement.kendoCalendar({
+        value: options.value,
+        // Implement the logic to be executed
+        // when the user selects a date
+        change: function(e) {
+          var chat = $('#chat').getKendoChat();
+          chat.postMessage('You have selected ' + kendo.toString(e.sender.value(), 'D') + '!');
+
+          var element = e.sender.element.closest('.k-card-container');
+
+          setTimeout(function() {
+            e.sender.destroy();
+            element.remove();
+          });
+        }
+      });
+
+      // Place the calendar within the Chat Card
+      var bodyElement = $('<div>').addClass("k-card-body").append(calendarElement);
+      this.element.addClass("k-card").append(bodyElement);
+    }
+  });
+
+  kendo.chat.registerComponent("CalendarComponent", CalendarComponent);
+
+  var chat = $("#chat").kendoChat().data("kendoChat");
+
+  chat.postMessage("Hello!");
+  chat.postMessage("Please, select a date from the Calendar.");
+
+  chat.renderAttachments({
+    attachments: [{
+      contentType: "CalendarComponent",
+      content: {
+        value: new Date()
+      }
+    }]
+  }, chat.getUser());
+</script>
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+<!doctype html>
+
+<html>
+    <head>
+
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        </head>
+<style>
+.login-banner-div {
+	background-color: white;
+/*     position: absolute;
+ *//*     height: 0px;
+ */
+}
+.login-banner-div img {
+	display: block;
+	margin: 0 auto;
+    height: 70px;
+}
+
+    body{
+
+        background-color: #88c7ec;
+    }
+    .tabs {
+  position: absolute;
+  min-height: 500px; /* This part sucks */
+  clear: both;
+  margin: 45px 0;
+  left: 50px;
+  top: 80px;
+}
+.tab {
+  float: left;
+  left: 5px;
+  top: 10px;
+
+}
+.tab label {
+  background: #eee;
+  padding: 10px;                            /*tabs property  */
+  border: 1px solid #ccc;
+  margin-left: -5px;
+  position: relative;
+  left: -30px;
+
+}
+.tab [type=radio]{
+  display: none;
+  padding-left: 100px;
+
+}
+.content1 {
+    position: absolute;
+  top: 57px;
+  left: -35px;
+  background: white;
+  right: 50px;
+  bottom: 0;
+  padding: 20px;
+  border: 5px solid #ccc;
+  width: 700px;
+  height: 380px;
+  padding-left: 100px;
+  overflow: scroll;
+  text-align: right;
+
+
+
+
+}
+.content2 {
+  position: absolute;
+  top: 60px;
+/*   left: -35px;
+ */  background: white;
+  right:-95px;
+  bottom: 0;
+  padding: 20px;
+  border: 5px solid #ccc;
+  width: 700px;
+  height: 380px;
+  padding-left: 100px;
+  overflow: scroll;
+  text-align: right;
+
+
+
+}.content3 {
+  position: absolute;
+  top: 60px;
+/*   left: -35px;
+ */  background: white;
+  right: -24px;
+  bottom: 0;
+  padding: 20px;
+  border: 5px solid #ccc;
+  width: 700px;
+  height: 380px;
+  padding-left: 100px;
+  overflow: scroll;
+  text-align: right;
+
+}.content4 {
+  position: absolute;
+  top: 60px;
+/*   left: -35px;
+ */  background: white;
+  right:56px;
+  bottom: 0;
+  padding: 20px;
+  border: 5px solid #ccc;
+  width: 700px;
+  height: 380px;
+  padding-left: 100px;
+  overflow: scroll;
+  text-align: right;
+
+
+}
+.content5 {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  background: lightblue;
+  right: 90px;
+  bottom: 0;
+  padding: 20px;
+  border: 5px solid #ccc;
+  width: 1000px;
+  height: 410px;
+  padding-left: 100px;
+   text-align: right;
+
+}
+/*  #tab-1{
+
+    position: absolute;
+    top:100px;
+    right: 600px;
+} */
+[type=radio]:checked ~ label {
+  background: rgb(228, 166, 166);
+  border-bottom: 5px solid white;
+  z-index: 5;
+}
+
+[type=radio]:checked ~ label ~ .content
+{
+      z-index: 5;
+  left: 5px;
+
+}
+.formcontrol{
+    position: absolute;
+    width: 700px;
+    left:114px;
+    height: 35px;
+    top:520px;
+
+}
+#ids{
+left: 80px;
+bottom: -550px;
+
+}
+#id1{
+
+
+
+    position: absolute;
+    left:780px;
+
+}
+#sb{
+    position: absolute;
+    height: 800px;
+    left: 10px;
+
+}
+#message1{
+
+position: absolute;
+    bottom:34px;
+    left: 730px;
+    height: 35px;
+    width: 90px;
+ }
+ .msg_b {
+    background: #88c7ec;
+    padding: 5px 15px;
+    min-height: 15px;
+    margin-bottom: 5px;
+    position: relative;
+    margin-left: 30px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    font-weight: bold;
+    border-bottom-right-radius: 20px;
+
+}
+#fa{
+    position: absolute;
+    left: 41px;
+    top:10px;
+}
+.bg{
+    position: absolute;
+    left: 15px;
+    width: 1000px;
+    height: 66px;
+    background-color: white;
+    top: 125px;
+}
+.blue{
+    color: red;
+}
+label{
+    position:absolute ;
+    left: 90px;;
+}
+.t1{
+position: absolute;
+right: 200px;
+left: 100px;
+width: 500px;
+top: -50px;
+}
+.t2{
+position: absolute;
+right: 20px;
+left: 169px;
+width: 500px;
+top: -50px;
+}
+.t3{
+position: absolute;
+right: 200px;
+left: 240px;
+width: 500px;
+top: -50px;
+}
+.t4{
+position: absolute;
+right: 20px;
+left: 320px;
+width: 500px;
+top: -50px;
+}
+#tab-1{
+    position: absolute;
+    right: 500px;
+    width: 500px;
+    display: block;
+    background-color: green;
+}
+
+</style>
+<body bgcolor="#88c7ec">
+ 		<div class="login-banner-div"  >
+            <img src="http://www.chandusoft.com/images/logo/chandusoft_logo.png" alt="chandusoft logo">
+        </div>
+
+
+        <div class="tabs">
+                <div class="t1">
+               <div class="tab" id='tb1'>
+                    <input type="radio" id="tab-1" name="tab-group-1" checked>
+                    <label for="tab-1" id='l1'>Tab One<span id ="cl1" onclick="close()"><button class="fa fa-close" id ="fa"></button></span>
+             </label>
+                    <div class="content1">
+                        stuff one
+                    </div>
+
+                </div>
+                </div>
+                  <div class="t2">
+                <div class="tab" id='tb2'>
+                    <input type="radio" id="tab-2" name="tab-group-1">
+                    <label for="tab-2">Tab Two <span id="cl2"><button class="fa fa-close" id ="fa"></button> </label>
+                    <div class="content2">
+                        stuff two
+                    </div>
+                </div>
+                  </div>
+            <div class="t3">
+                 <div class="tab" id='tb3'>
+                    <input type="radio" id="tab-3" name="tab-group-1">
+                    <label for="tab-3">Tab Three  <span id='cl3'><button class="fa fa-close" id ="fa"></button></label>
+                    <div class="content3">
+                        stuff third
+                    </div>
+                </div>
+            </div>
+                <div class="t4">
+
+                <div class="tab" id="tb4">
+                        <input type="radio" id="tab-4" name="tab-group-1">
+                        <label for="tab-4">Tab four <span id='cl4'><button class="fa fa-close" id ="fa"></button></label>
+                        <div class="content4">
+                            stuff fourth
+                        </div>
+                    </div>
+                </div>
+             </div>
+<div class="im">
+      <input type="text" class="formcontrol" placeholder="Type Message here" name="search" id="message"   >
+      <div  class="btn btn-info btn-lg" id="message1" onclick="getmessage1()" >
+        <span class="glyphicon glyphicon-send"></span> Send
+
+    </div></div>
+
+
+    <h3>Chat_app</h3>
+    <input type="button" class="formcontrol2" style="position:absolute;right: 50PX;" value="Click here to get one tabbed pane" name="search" id="message"   onclick="getmessage()">
+
+<script>
+
+
+</script>
+      </body>
+         </html>

@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+
+<body>
+	<br />
+	<br />
+	<br />
+	<br />
+	<div class="container">
+		<form class="well">
+			<div id="name-color" class="form-group">
+				<label for="email">Name </label> <input type="email"
+					class="form-control" id="name" name="name"> <span
+					id="valid"></span>
+			</div>
+
+			<button type="submit" id="submit-btn" class="btn btn-default  ">Submit</button>
+		</form>
+
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<p class="text-center">ajax demo</p>
+					</div>
+					<div class="panel-body">
+					<div class="row">
+					<div class="col-md-8"><div id="ajax-data"></div></div>
+					<div class="col-md-4"><div id="ajax-status" class="text-success"></div></div>
+					</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document)
+				.ready(
+						function() {
+							$("#name")
+									.keyup(
+											function() {
+
+												var nameLen = this.value.length;
+												var name = this.value
+												//console.log("name : "+this.value +" , length :"+ nameLen.length);
+
+												if (nameLen >= 5) {
+													$("#valid")
+															.html(
+																	"<b class='text-success'>valid le must be =>5 </b>")
+
+													$("#name-color").addClass(
+															"has-success");
+													$("#name-color")
+															.removeClass(
+																	"has-error");
+													$("#submit-btn").addClass(
+															"btn-success");
+													$("#submit-btn")
+															.removeClass(
+																	"disabled btn-danger ");
+
+													/*
+
+													 ajax code start
+
+													 */
+
+
+													 $.get("http://localhost:8080/my-name?name="+name, function(data, status){
+													  //    alert("achuht ::: "+data+"::status:"+status) ;
+													   $("#ajax-data").text("name is : "+data);
+													   $("#ajax-status").text("status :"+status);
+
+													    });
+
+
+												} else {
+													$("#valid")
+															.html(
+																	"<b class='text-danger'>invalid le must be =>5 </b>");
+													$("#name-color")
+															.removeClass(
+																	"has-success");
+													$("#name-color").addClass(
+															"has-error");
+													$("#submit-btn")
+															.addClass(
+																	"disabled btn-danger");
+													$("#submit-btn")
+															.removeClass(
+																	"btn-success ");
+
+													$("#ajax-data").text("");
+													 $("#ajax-status").text("");
+												}
+
+											});
+						});
+	</script>
+</body>
+</html>

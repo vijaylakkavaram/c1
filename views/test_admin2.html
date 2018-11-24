@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+    <title>Chat App</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<!--     <script src ='/public/js/jquery.js'>
+        </script> -->
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+.login-banner-div {
+	background-color: white;
+}
+.login-banner-div img {
+	display: block;
+    margin: 0 auto;
+
+}
+.message{
+
+    padding: 10px;
+}
+.chat.box{
+
+
+
+}
+p.ridge {
+    border-style: ridge;
+    height: 400px;
+    width: 850px;
+    overflow-y: scroll;
+    position:absolute;
+    left: 160px;
+    top: 160px;
+    border:2px solid black;
+    border-radius:5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: right;
+
+       line-height: 1;
+          padding: 0;
+          vertical-align: top;
+          margin-bottom: -2px;
+;
+    }
+    .msg{
+        position:absolute;
+    left: 160px;
+    bottom: 30px;
+    width: 850px;
+    height: 40px;
+    border:2px solid black;
+    border-radius:5px;
+
+
+
+    }
+    .h2{
+        position:absolute;
+        left: 500px;
+        top: 110px;
+        color: brown;
+    }
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    position: relative;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+.tablinks{
+
+
+    left: 450px;
+}
+.fa.fa-close{
+    position: absolute;
+
+font-size: 25px;
+top: 175px;
+right: 100px;
+
+}
+
+
+
+            </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body bgcolor="#88c7ec">
+		<div class="login-banner-div"  >
+			<img src="http://www.chandusoft.com/images/logo/chandusoft_logo.png" alt="chandusoft logo">
+        </div>
+
+ <div class="tab">
+    <button class="tablinks"<i class="fa fa-close"  onclick="openCity(event, 'London')">Client1</button>
+    <button class="tablinks" onclick="openCity(event, 'Paris')">Client2</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Client3</button>
+    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Client4</button>
+  </div>
+  <h2>
+
+    Welcome  to <br>  Chandusoft <br> Chat<br> Application
+
+  </h2>
+
+<!--   <i class="fa fa-close" style="font-size:24px"></i>
+ -->
+  <p class="ridge"     ></i>  </p>
+  <p class="ridge1"></p>
+  <p class="ridge2"></p>
+  <p class="ridge3"></p>
+<input type="text"  id="message" class="msg" placeholder="enter the message"  >
+
+
+
+</body>
+<script >
+
+    var d=new Date();
+    console.log(d.toDateString())
+    function get(){
+
+        console.log('hi')
+    }
+    var number;
+function getmessage(){
+         number=document.getElementById("message").value;
+  //  console.log(number)
+    }
+    $(".msg").on('keyup', function (e) {
+    if (e.keyCode == 13) {
+        // Do something
+        getmessage()
+        $(".ridge").append(d.toDateString().fontsize(0.5)+"<br>");
+        $(".ridge").append(number+"<br>");
+     $('.msg').val('')
+    }
+});
+
+ $(".btn").click(function(){
+    // console.log(number)
+    $(".ridge").append(number+"<br>");
+     $('.msg').val('')
+});
+
+
+
+
+</script>
+
+</html>

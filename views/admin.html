@@ -1,0 +1,112 @@
+
+ <!doctype html>
+<html>
+    <head>
+            <title>Chat App</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="/css/adminStyle1.css">
+            <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+        </head>
+<body bgcolor="#88c7ec">
+		<div class="login-banner-div"  >
+			<img src="http://www.chandusoft.com/images/logo/chandusoft_logo.png" alt="chandusoft logo">
+        </div>
+
+
+        <ul class="pages">
+                <li class="chat page">
+                        <div class="container"></div>
+
+                        <div class="tabs" >
+
+
+                            <div class="t1">
+                              <div class="taba" id='tb1'>
+<!--
+                          <span id ="cl1" onclick="close()">
+                            <button class="fa fa-close" id ="fa1"></button> -->
+           <!--              </span>
+                            </div> -->
+                        </div>
+                        <div class="t2">
+                                     <span id="cl2">
+                                    <button class="fa fa-close" id ="fa2"></button>
+                                </span>
+
+                            </div>
+                        </div>
+                      <!--     <div class="t3">
+                             <div class="tabc" id='tb3'>
+                                <input type="radio" id="tab-3" name="tab-group-1">
+                                <label for="tab-3">Tab Three  <span id='cl3'><button class="fa fa-close" id ="fa"></button></label>
+                                <div class="content3">
+                                    stuff third
+                                </div>
+                            </div>
+                        </div> -->
+
+                       <!--      <div class="t4">
+                            <div class="tabd" id="tb4">
+                                    <input type="radio" id="tab-4" name="tab-group-1">
+                                    <label for="tab-4">Tab four <span id='cl4'><button class="fa fa-close" id ="fa"></button></label>
+                                    <div class="content4">
+                                        stuff fourth
+                                    </div>
+                                </div>
+                            </div> -->
+</div>
+
+                              <p class='keystroke'>...</p>
+                              <h1 class="msggs"></h1>
+ <input type="text" class="inputMessage1" placeholder="Type Message here">
+ <p><button class="w3-button w3-pale-blue" id='logout' onclick="mylogout()">Log out</button></p>
+
+<!-- <div  class="btn btn-info btn-lg"  onclick="getmessage1()" >
+        <span class="glyphicon glyphicon-send"></span> Send
+    </div> -->
+                      <ul class ="adminList" id="admins">
+                    </ul>
+                      </li>
+<ul class="l-success">
+        <div class="w3-panel w3-green">
+                <h3>Success!</h3>
+                <p>Hi your successfully logged out</p>
+              </div>
+</ul>
+                <li class="login page">
+                    <div class="form" >
+                        <h3 class="title">Agent Username</h3>
+                        <input class="usernameInput" type="text" maxlength="14"/>
+                        <h3 class="title">Password</h3>
+                        <input class="passwordInput" type="password" maxlength="40" />
+                    </div>
+                    <a class="a" href="http://localhost:8124/Registration">Need to Register?</a>
+                </li>
+                <li class="error page" style="display: none">
+                    <div class="form">
+                        <h3 class="title">Reconnecting...</h3>
+                    </div>
+                </li>
+            </ul>
+            <audio id="windowSound">
+                <source src="/sounds/new_chat_window.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="chatSound">
+                <source src="/sounds/new_message.mp3" type="audio/mpeg">
+            </audio>
+            <audio id="pokeSound">
+                <source src="/sounds/poke.mp3" type="audio/mpeg">
+            </audio>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/js/ADMIN1.js"></script>
+      </body>
+          </html>

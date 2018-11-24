@@ -1,0 +1,767 @@
+.login-banner-div {
+	background-color: white;
+/*     position: absolute;
+ *//*     height: 0px;
+ */
+}
+.login-banner-div img {
+	display: block;
+	margin: 0 auto;
+    height: 70px;
+}
+#logout{
+position: absolute;
+top:20px;
+right: 50px;
+}
+.tabs1{
+
+
+    position: absolute;
+    background-color: #3e8e41;
+    width:750px;
+    top: 20px;
+    left: 70px;
+    height: 50px;
+    }
+    body{
+
+        background-color: #88c7ec;
+    }
+    .tabs {
+        position: relative;
+        min-height: 200px; /* This part sucks */
+        clear: both;
+        margin: 25px 0;
+        width: 50px;
+
+      }
+      .tab {
+        float: left;
+      }
+      .tab label {
+        background: #eee;
+        padding: 10px;
+        border: 1px solid #ccc;
+        margin-left: -1px;
+        position: relative;
+        left: 1px;
+      }
+      .tab [type=radio] {
+        display: none;
+      }
+      .content {
+        position: absolute;
+        top: 28px;
+        left: 0;
+        background: white;
+        right: 0;
+        bottom: 0;
+        padding: 20px;
+        border: 1px solid #ccc;
+      }
+      [type=radio]:checked ~ label {
+        background: white;
+        border-bottom: 1px solid white;
+        z-index: 2;
+      }
+      [type=radio]:checked ~ label ~ .content {
+        z-index: 1;
+      }
+
+
+    .tabs {
+  position: absolute;
+  min-height: 500px; /* This part sucks */
+  clear: both;
+  margin: 45px 0;
+  left: 50px;
+  top: 80px;
+}
+.tab {
+  float: left;
+  left: 5px;
+  top: 10px;
+
+}
+.tab label {
+  background: #eee;
+  padding: 10px;                            /*tabs property  */
+  border: 1px solid #ccc;
+  margin-left: -5px;
+  position: relative;
+  left: -30px;
+
+}
+.tab [type=radio]{
+  display: none;
+  padding-left: 100px;
+
+}
+.content1 {
+    position: absolute;
+  top:70px;
+  left: 30px;
+  background: white;
+  right:500px;
+  bottom: 10;
+  padding: 20px;
+  border: 5px solid #ccc;
+  width: 750px;
+  height: 380px;
+  padding-left: 100px;
+  overflow: scroll;
+  text-align: right;
+
+}
+.content2 {
+  position: absolute;
+  top: 70px;
+  left: 30px;
+  background: white;
+  right:100px;
+  bottom: 10;
+  padding: 20px;
+  border: 5px solid #ccc;
+  width: 750px;
+  height: 380px;
+  padding-left: 100px;
+  overflow: scroll;
+  text-align: right;
+
+}.content3 {
+  position: absolute;
+  top: 60px;
+/*   left: -35px;
+ */  background: white;
+  right: -24px;
+  bottom: 0;
+  padding: 20px;
+  border: 5px solid #ccc;
+  width: 700px;
+  height: 380px;
+  padding-left: 100px;
+  overflow: scroll;
+  text-align: right;
+
+}.content4 {
+  position: absolute;
+  top: 60px;
+/*   left: -35px;
+ */  background: white;
+  right:56px;
+  bottom: 0;
+  padding: 20px;
+  border: 5px solid #ccc;
+  width: 700px;
+  height: 380px;
+  padding-left: 100px;
+  overflow: scroll;
+  text-align: right;
+
+
+}
+.content5 {
+  position: absolute;
+  top: 60px;
+  left: 50px;
+  background: lightblue;
+  right: 90px;
+  bottom: 0;
+  padding: 20px;
+  border: 5px solid #ccc;
+  width: 1000px;
+  height: 410px;
+  padding-left: 100px;
+   text-align: right;
+
+}
+.keystroke{
+position: relative;
+top:425px;
+right: 1000px;
+color: #0b7dda;
+}
+ #tab-1{
+
+    position: absolute;
+    top:100px;
+    right: 600px;
+}
+[type=radio]:checked ~ label {
+  background: rgb(228, 166, 166);
+  border-bottom: 5px solid white;
+  z-index: 5;
+}
+
+[type=radio]:checked ~ label ~ .content
+{
+      z-index: 5;
+  left: 5px;
+
+}
+.inputMessage1{
+    position: absolute;
+    width: 750px;
+    left:39px;
+    height: 35px;
+    top:501px;
+
+}
+#ids{
+left: 80px;
+bottom: -550px;
+
+}
+#id1{
+    position: absolute;
+    left:780px;
+
+}
+#sb{
+    position: absolute;
+    height: 800px;
+    left: 10px;
+
+}
+#message1{
+position: absolute;
+    bottom:34px;
+    left: 730px;
+    height: 35px;
+    width: 90px;
+ }
+ .msg_b {
+    background: #88c7ec;
+    padding: 5px 15px;
+    min-height: 15px;
+    margin-bottom: 5px;
+    position: relative;
+    margin-left: 30px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    font-weight: bold;
+    border-bottom-right-radius: 20px;
+
+}
+#fa1{
+    position: absolute;
+    left: 12px;
+    top:14px;
+ }
+
+#fa2{
+    position: absolute;
+    left:50px;
+    top:14px;
+}
+#menu1{
+    position: absolute;
+top:2px;
+
+}
+.inputMessage {
+width: 30px;
+top:20px;
+}
+.bg{
+    position: absolute;
+    left: 15px;
+    width: 1000px;
+    height: 66px;
+    background-color: white;
+    top: 125px;
+}
+.blue{
+    color: red;
+}
+label{
+    position:absolute ;
+    left: 90px;
+}
+.t1{
+position: absolute;
+right: 200px;
+left: 100px;
+width: 500px;
+top: -120px;
+}
+.t2{
+position: absolute;
+right: 20px;
+left: 169px;
+width: 500px;
+top: -120px;
+}
+.t3{
+position: absolute;
+right: 200px;
+left: 240px;
+width: 500px;
+top: -50px;
+}
+.t4{
+position: absolute;
+right: 20px;
+left: 240px;
+width: 500px;
+top: -50px;
+}
+#tab-1{
+    position: absolute;
+    right: 500px;
+    width: 500px;
+    display: block;
+    background-color: green;
+}
+
+
+.msg_b {
+    background: #88c7ec;
+    padding: 5px 15px;
+    min-height: 15px;
+    margin-bottom: 5px;
+    position: relative;
+    margin-left: 30px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    font-weight: bold;
+    border-bottom-right-radius: 20px;
+
+}
+.msg_a{
+    background: #81804d;
+    padding: 5px 15px;
+    min-height: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    margin-left: 30px;
+    border-radius: 5px;
+    word-wrap: break-word;
+    font-weight: bold;
+    border-bottom-right-radius: 20px;
+    left:-100px;
+    text-align: left;
+
+}
+
+
+html,
+body{
+		margin: 0px;
+		 height: 100%;
+		 padding:0;
+}
+html {
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+input {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+ul {
+    list-style: none;
+    word-wrap: break-word;
+}
+
+
+/* Pages */
+
+.pages {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.page {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+
+
+/* Login Page */
+
+.login.page,
+.error.page {
+    background-color: #88c7ec;
+}
+
+.form {
+    height: 100px;
+    margin-top: -200px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+
+
+
+.login.page .form .usernameInput,
+.passwordInput {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #000;
+    outline: none;
+    padding-bottom: 15px;
+    text-align: center;
+    width: 400px;
+}
+.a{
+  margin-left:1200px;
+	}
+
+.title {
+    font-size: 200%;
+}
+
+.login.page .usernameInput,
+.passwordInput {
+    font-size: 200%;
+    letter-spacing: 3px;
+}
+
+.title,
+.login.page .usernameInput,
+.passwordInput {
+    color: #000;
+    font-weight: 100;
+}
+
+
+/* Chat page */
+
+.container {
+    width: 85%;
+    height: 95%;
+    padding: 1em;
+    padding-left: 5em;
+    float: left;
+}
+
+.usersOnline {
+    width: 15%;
+    float: left;
+    height: 100%;
+    text-align: center;
+    border-left: 1px solid #000
+}
+
+.chat.page {
+    display: none;
+}
+
+.adminList {
+    padding: 0px;
+}
+
+.adminList li {
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+
+/* Font */
+
+.messages {
+    font-size: 150%;
+}
+
+.inputMessage {
+    font-size: 100%;
+}
+
+.log {
+    color: gray;
+    font-size: 70%;
+    margin: 5px;
+    text-align: center;
+}
+
+
+/* Messages */
+
+.chatArea {
+    height: 55%;
+    width: 30%;
+    border: 1px solid #000;
+    padding: 0em 1em 1em 1em;
+    float: left;
+    overflow: hidden;
+}
+.chatHeader {
+    height: 9%;
+    margin: 0;
+    padding: 0.1em 0.1em 0.1em 0.3em;
+    margin-left: -1em;
+    margin-right: -1em;
+    border-bottom: 0.1em solid #000;
+}
+
+.messages {
+    height: 65%;
+    margin: 0;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    overflow: auto;
+}
+
+.username,
+.passwordInput {
+    font-weight: 700;
+    overflow: hidden;
+    padding-right: 15px;
+}
+
+.timestamp {
+    color: black;
+    font-size: 70%;
+    margin: 5px;
+    text-align: right;
+}
+
+.typing {
+    height: 6%;
+    padding: 0 0.5em 0.2em 0.5em;
+}
+
+
+/* Input */
+/*
+.inputMessage {
+    border: 0.4em solid #000;
+    bottom: 0;
+    height: 20%;
+    outline: none;
+    padding-left: 10px;
+    width: 100%;
+} */
+[type="submit"] {
+clear: left;
+margin: 20px 0 0 230px;
+font-size:18px
+}
+.btn1{
+    width: 30px;
+    height:57px;
+    background-color: #0b7dda;
+    position: absolute;
+    left: 45px;
+}
+
+.btn2{
+    width: 30px;
+    height:57px;
+    background-color: #0b7dda;
+    position: absolute;
+    left: 160px;
+}
+/*
+.inputMessage
+{
+    background-color: #4CAF50; /* Green
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: #008CBA;
+
+}
+.inputMessage button {
+    background-color: #4CAF50; // Green background /
+    border: 1px solid green; /Green border /
+    color: white; / / White text /
+    padding: 10px 24px; / Some padding /
+    cursor: pointer; // Pointer/hand icon /
+    float: left; /// Float the buttons side by side /
+}
+
+// Clear floats (clearfix hack) /
+.inputMessage:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.inputMessage:not(:last-child) {
+    border-right: none; / Prevent double borders /
+}
+
+/* Add a background color on hover
+.inputMessage:hover {
+    background-color: #3e8e41;
+} */
+
+.inputMessage2 {
+    background-color: #2196F3;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    position: absolute;
+    left:40px;
+}
+
+.inputMessage3{
+    background-color: #2196F3;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    position: absolute;
+    left:150px;
+}
+#inputMessage2 {
+    background-color: #2196F3;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    position: absolute;
+    left:40px;
+}
+
+.dropdown {
+    position: absolute;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #f1f1f1;
+     z-index: 1;
+     width: 135px;
+   }
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    position: absolute;
+    right: -200px;
+    left:10px;
+    bottom:-110px;
+
+
+}
+.btn1:focus ~ .floatinglabel,
+.btn1:hover, .dropdown:hover .btn {
+    background-color: #0b7dda;
+}
+
+.dropdown1 {
+    position: absolute;
+    display: inline-block;
+}
+
+.dropdown-content1 {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+     z-index: 1;
+     width: 170px;
+}
+
+.dropdown-content1 a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content1 a:hover {
+    background-color: #ddd;
+    display: inline-flex;
+
+}
+
+.dropdown1:hover .dropdown-content1 {
+    display:table-header-group;
+    position: absolute;
+    right: 50px;
+    left:10px;
+    bottom:-110px;
+
+}
+
+.btn2:hover, .dropdown1:hover .btn {
+    background-color: #0b7dda;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
+.btn-group button {
+    background-color: skyblue; /* Green background */
+    border: 1px solid green; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+
+}
+
+/* Clear floats (clearfix hack) */
+.btn-group:after {
+     content: "";
+    clear: both;
+    display: table;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+       /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+.btn-group button:hover {
+    background-color: #3e8e41;
+}

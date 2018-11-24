@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html>
+    <head>
+
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.911/styles/kendo.common.min.css">
+            <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.911/styles/kendo.rtl.min.css">
+            <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.911/styles/kendo.default.min.css">
+            <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2018.3.911/styles/kendo.mobile.all.min.css">
+            <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+            <script src="https://kendo.cdn.telerik.com/2018.3.911/js/angular.min.js"></script>
+            <script src="https://kendo.cdn.telerik.com/2018.3.911/js/jszip.min.js"></script>
+            <script src="https://kendo.cdn.telerik.com/2018.3.911/js/kendo.all.min.js"></script>
+
+</head>
+<style>
+
+        .k-tabstrip-items li .k-button {
+          line-height: 1;
+          padding: 0;
+          vertical-align: top;
+          margin-bottom: -2px;
+        }
+
+        .k-tabstrip-items li .k-icon {
+          margin: 0;
+        }
+
+#tabstrip1{
+
+    position: relative;
+    width: 1000px;
+}
+.p1{
+
+height: 300px;
+
+}
+
+      </style>
+<body bgcolor="#88c7ec">
+		<div class="login-banner-div"  >
+			<img src="http://www.chandusoft.com/images/logo/chandusoft_logo.png" alt="chandusoft logo">
+        </div>
+      <div id="tabstrip">
+        <ul>
+<!--           <li class="k-state-active">Item 1</li>
+ -->
+    <li><span> Client 1<button data-type="remove" class="k-button k-button-icon"><span class="k-icon k-i-close"></span></button></span></li>
+          <li><span>Client 2 <button data-type="remove" class="k-button k-button-icon"><span class="k-icon k-i-close"></span></button></span></li>
+           <li><span> Client 3<button data-type="remove" class="k-button k-button-icon"><span class="k-icon k-i-close"></span></button></span></li>
+          <li><span> Client4<button data-type="remove" class="k-button k-button-icon"><span class="k-icon k-i-close"></span></button></span></li>
+
+
+        </ul>
+
+        <div>
+<!--<p class="p1"><button type="button" class="k-button" id="appendButton">Append Item</button></p>
+ -->
+
+           <p class="p1"></p>
+        </div>
+        <div>
+   <p class="p1"></button></p>
+
+         </div>
+         <div>
+                <p class="p1"></button></p>
+
+                      </div>
+                      <div>
+                            <p class="p1"></button></p>
+
+                                  </div>
+
+      </div>
+
+      </body>
+      <script>
+        $(function(){
+          // initialize the TabStrip. Server wrappers will generate the below line automatically
+          $("#tabstrip").kendoTabStrip();
+
+          // get the widget reference
+          var tabstrip = $("#tabstrip").data("kendoTabStrip");
+
+          tabstrip.tabGroup.on("click", "[data-type='remove']", function(e) {
+              e.preventDefault();
+              e.stopPropagation();
+
+              var item = $(e.target).closest(".k-item");
+              tabstrip.remove(item.index());
+          });
+
+          var tabCounter = tabstrip.items().length;
+
+          $("#appendButton").click(function(){
+            tabstrip.append({
+              text: 'Item ' + (++tabCounter) + ' <button data-type="remove" class="k-button k-button-icon"><span class="k-icon k-i-close"></span></button>',
+              encoded: false,
+              content: "<p>Appended item " + tabCounter + " content</p>"
+            });
+          });
+
+        });
+      </script>
+          </html>

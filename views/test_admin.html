@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+    <title>Chat App</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+<!--     <script src ='/public/js/jquery.js'>
+        </script> -->
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+.login-banner-div {
+	background-color: white;
+}
+.login-banner-div img {
+	display: block;
+    margin: 0 auto;
+
+}
+.blue{
+
+    color: blue;
+}
+.message{
+
+    padding: 10px;
+}
+.chat.box{
+
+
+
+}
+p.ridge {
+    border-style: ridge;
+    height: 420px;
+    width: 950px;
+    overflow: scroll;
+    position:absolute;
+    left: 140px;
+    top: 140px;
+    border:2px solid black;
+    border-radius:5px;
+
+;
+    }
+    .msg{
+        position:absolute;
+    left: 140px;
+    bottom: 30px;
+    width: 950px;
+    height: 40px;
+    border:2px solid black;
+    border-radius:5px;
+
+
+
+    }
+    .h2{
+        position:absolute;
+        left: 500px;
+        top: 110px;
+        color: brown;
+    }
+
+/*     #click{
+
+
+        width: 200px;
+    } */
+
+
+            </style>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body bgcolor="#88c7ec">
+		<div class="login-banner-div"  >
+			<img src="http://www.chandusoft.com/images/logo/chandusoft_logo.png" alt="chandusoft logo">
+        </div>
+        <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:10%">
+            <h3 class="w3-bar-item">Clients</h3>
+            <a href="#" class="w3-bar-item w3-button" id='click' onclick="get()">client 1</a>
+            <a href="#" class="w3-bar-item w3-button"  id='click'>Client 2</a>
+            <a href="#" class="w3-bar-item w3-button" id='click' >Client 3</a>
+            <a href="#" class="w3-bar-item w3-button" id='click' >Client 4</a>
+          </div>
+
+<h2 class='h2'>Chat_Window</h2>
+
+ <p class="ridge"></p>
+ <p class="ridge1"></p>
+ <p class="ridge2"></p>
+ <p class="ridge3"></p>
+
+ <input type="button" value="send" class="btn" onclick="getmessage()"/>
+
+<input type="text"  id="message" class="msg" placeholder="enter the message"  >
+
+
+
+</body>
+<script >
+    function get(){
+
+        console.log('hi')
+    }
+    var number;
+function getmessage(){
+         number=document.getElementById("message").value;
+  //  console.log(number)
+    }
+    $(".msg").on('keyup', function (e) {
+    if (e.keyCode == 13) {
+        // Do something
+        getmessage()
+        $(".ridge").append(number+"<br>");
+     $('.msg').val('')
+    }
+});
+
+ $(".btn").click(function(){
+    // console.log(number)
+    $(".ridge").append(number+"<br>");
+     $('.msg').val('')
+});
+
+
+
+
+</script>
+
+</html>
